@@ -177,6 +177,7 @@ DEPENDENCIES
   formtastic-bootstrap
   guard-rspec (= 1.2.1)
   guard-spork (= 1.2.0)
+  i18n (= 0.6.1)
   libnotify (= 0.5.9)
   pg (= 0.12.2)
   rails (= 3.2.13)
