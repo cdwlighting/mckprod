@@ -22,6 +22,12 @@ describe User do
   it { should respond_to( :password ) }
   it { should respond_to( :password_confirmation ) }
   it { should respond_to( :authenticate ) }
+  it { should have_many( :artist_users ) }
+  it { should have_many(:artists).through(:artist_users) }
+  it { should have_many( :user_albums) }
+  it { should have_many(:albums).through(:user_albums)}
+  it { should have_many(:user_recordings)}
+  it { should have_many(:record).through(:user_recordings)}
 
   it { should be_valid }
 

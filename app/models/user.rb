@@ -21,4 +21,11 @@ class User < ActiveRecord::Base
             uniqueness: { case_sensitive: false}
   validates :password, presence: true, length: { minimum:6 }
   validates :password_confirmation, presence: true
+
+  has_many :artist_users
+  has_many :artists, :through => :artist_users
+  has_many :user_albums
+  has_many :albums, :through => :user_albums
+  has_many :user_recordings
+  has_many :record, :through => :user_recordings
 end
